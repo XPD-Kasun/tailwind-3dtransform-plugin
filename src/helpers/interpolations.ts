@@ -1,22 +1,22 @@
 type Mapper = (value: number) => number;
 
-export function linearInterpolateKeys(start:number, end:number, interval:number) {
+export function linearInterpolateKeys(start: number, end: number, interval: number) {
 
        let obj = {};
 
-       for (var i = start; i <= end; i += interval) {
+       for (let i = start; i <= end; i += interval) {
               obj[i] = i.toString();
        }
 
        return obj;
 }
 
-export function muliplicateInterpolateKeys(start:number, end: number, multiply: number) {
+export function muliplicateInterpolateKeys(start: number, end: number, interval: number, multiply: number) {
 
        let obj = {};
 
-       for(var i=start; i <= end; i*=multiply) {
-              obj[i] = i.toString();
+       for (var i = start; i <= end; i += interval) {
+              obj[i] = (i * multiply).toString();
        }
 
        return obj;
@@ -26,8 +26,8 @@ export function mapInterpolateKeys(start: number, end: number, incrementor: Mapp
 
        let obj = {};
 
-       for(var i=start; i <= end; i=incrementor(i)) {
-              obj[i] = mapper(i);
+       for (var i = start; i <= end; i = incrementor(i)) {
+              obj[i] = mapper(i).toString();
        }
 
        return obj;

@@ -3,12 +3,13 @@
               "module": "ESNext",
               "moduleResolution": "nodenext",
               "target": "ES6",
-              "outDir": "dist",
+              "esModuleInterop": true,
               "allowSyntheticDefaultImports": true,
-              "declaration": false,
+              "declaration": false
        },
        "include": [
-              "src/**/*"
+              "src/**/*",
+              "test/setup/toMatchCss.d.ts"
        ],
        "exclude": [
               "node_modules",

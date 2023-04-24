@@ -3,10 +3,13 @@
   "version": "1.0.0",
   "description": "Tailwind plugin to enable css 3d transforms properties for tailwind.",
   "main": "dist/index.js",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "rollup -c rollup.config.js",
-    "dev": "rollup -c --watch"
+    "dev": "rollup -c --watch",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -29,6 +32,7 @@
   },
   "homepage": "https://github.com/XPD-Kasun/tailwind-3dtransform-plugin#readme",
   "devDependencies": {
+    "@jest/globals": "^29.5.0",
     "@rollup/plugin-node-resolve": "^15.0.2",
     "@rollup/plugin-typescript": "^11.1.0",
     "@types/node": "^18.16.0",
@@ -36,8 +40,12 @@
     "@typescript-eslint/parser": "^5.59.0",
     "eslint": "^8.39.0",
     "jest": "^29.5.0",
+    "jest-matcher-css": "^1.1.0",
+    "lightningcss": "^1.20.0",
+    "postcss": "^8.4.23",
     "rollup": "^3.20.7",
     "tailwindcss": "^3.3.1",
+    "ts-jest": "^29.1.0",
     "typescript": "^5.0.4"
   }
 }

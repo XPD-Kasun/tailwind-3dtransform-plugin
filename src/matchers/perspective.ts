@@ -6,23 +6,26 @@ export default function perspective({matchUtilities, theme}: PluginAPI) {
        matchUtilities({
               
               perspective: (value) => {
+                     // Check if value is a number. If not pass it.
+                     if(/[^0-9]/.test(value)) {
+                            return {
+                                   perspective: `${value}`
+                            };
+                     }
                      
-                     const unit = (value < 100) ? 'rem' : 'px';
+                     // Else if value less than 10, we use rem. Else we use px.
                      return {
-                            perspective: `${value}${unit}`
+                            perspective: `${value}px`
                      };
               }
 
        }, {
               supportsNegativeValues: false,
               respectImportant: true,
-              type: 'number',
+              type: ['length', 'percentage', 'number'],
               values: theme('perspective')
        });
 
 }
 
-export const perspectiveDefaults = Object.assign(
-       mapInterpolateKeys(1, 10, (i) => 2*i, (i) => i/4),
-       linearInterpolateKeys(0, 1200, 200)
-);
+export const perspectiveDefaults = linearInterpolateKeys(0, 1600, 200)
