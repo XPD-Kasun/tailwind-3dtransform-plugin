@@ -27,6 +27,8 @@ describe('perspective Matcher', () => {
 
               let result = await getTailwindOutput(`<div>
                      <div class="perspective-[100px]"></div>
+                     <div class="perspective-[300]"></div>
+                     <div class="perspective-[300px]"></div>
                      <div class="perspective-[70vh]"></div>
                      <div class="perspective-[454vw]"></div>
                      <div class="perspective-[100rem]"></div>
@@ -38,6 +40,12 @@ describe('perspective Matcher', () => {
                      }
                      .perspective-\\[100rem\\]{
                             perspective: 100rem;
+                     }
+                     .perspective-\\[300\\]{
+                            perspective: 300px;
+                     }
+                     .perspective-\\[300px\\]{
+                            perspective: 300px;
                      }
                      .perspective-\\[454vw\\]{
                             perspective: 454vw;

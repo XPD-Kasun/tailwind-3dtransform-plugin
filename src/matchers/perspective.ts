@@ -5,7 +5,7 @@ export default function perspective({matchUtilities, theme}: PluginAPI) {
        
        matchUtilities({
               
-              perspective: (value) => {
+              perspective: (value, x) => {
                      // Check if value is a number. If not pass it.
                      if(/[^0-9]/.test(value)) {
                             return {
@@ -13,7 +13,6 @@ export default function perspective({matchUtilities, theme}: PluginAPI) {
                             };
                      }
                      
-                     // Else if value less than 10, we use rem. Else we use px.
                      return {
                             perspective: `${value}px`
                      };
@@ -22,7 +21,7 @@ export default function perspective({matchUtilities, theme}: PluginAPI) {
        }, {
               supportsNegativeValues: false,
               respectImportant: true,
-              type: ['length', 'percentage', 'number'],
+              type: ['length', 'number'],
               values: theme('perspective')
        });
 

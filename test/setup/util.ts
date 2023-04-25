@@ -22,13 +22,14 @@ export function format(input: string): string {
 
 export async function getTailwindOutput(html, config?, from = undefined): Promise<postcss.Result> {
 
+       let inputCSS = config?.inputCSS || "@tailwind utilities;";
        return postcss(tailwindcss({
               content: [{
                      raw: html
               }],
               plugins: [plugin],
               ...config
-       })).process("@tailwind utilities;", {
+       })).process(inputCSS, {
               from
        }).then();
 
