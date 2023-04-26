@@ -21,4 +21,31 @@ describe('transform scale', () => {
               `);
        });
 
+       it('scale-3d creates correct classes', async () => {
+
+              const output = await getTailwindOutput(`<div>
+                     <div class="scale-3d-[0.7]"></div>
+                     <div class="scale-3d-[0.5,0.7,0.3]"><div>
+                     <div class="scale-3d-110"></div>
+              </div>`);
+
+              matchCss(output.css, `
+                     .scale-3d-110 {
+                            --tw-scale-x: 1.1;
+                            --tw-scale-y: 1.1;
+                            --tw-scale-z: 1.1;
+                     }                     
+                     .scale-3d-\\[0\\.5\\,0\\.7\\,0\\.3\\] {
+                            --tw-scale-x: .5;
+                            --tw-scale-y: .7;
+                            --tw-scale-z: .3;
+                     }                     
+                     .scale-3d-\\[0\\.7\\] {
+                            --tw-scale-x: .7;
+                            --tw-scale-y: .7;
+                            --tw-scale-z: .7;
+                     }
+              `);
+       });
+
 });
