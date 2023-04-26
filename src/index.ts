@@ -16,6 +16,16 @@ const tailwind3dTransformPlugin = plugin((pluginAPI) => {
        flip(pluginAPI);
        transformOverride(pluginAPI);
 
+	pluginAPI.addBase({
+		':root': {
+			'--tw-rotate-x': '0',
+                     '--tw-rotate-y': '0',
+                     '--tw-translate-z': '0',
+                     '--tw-scale-z': '1',
+                     '--tw-rotate-3d': '0,0,0,0deg'
+		}
+	});
+
 }, {
        theme: {
               extend: {
@@ -26,14 +36,14 @@ const tailwind3dTransformPlugin = plugin((pluginAPI) => {
                             135: '135deg',
                             120: '120deg',
                             270: '270deg'
-                     },
-                     variables: {
-                            '--tw-rotate-x': '0',
-                            '--tw-rotate-y': '0',
-                            '--tw-rotate-3d': '0,0,0,0deg',
-                            '--tw-scale-z': '1',
-                            '--tw-translate-z': '0',
                      }
+              },
+              variables: {
+                     '--tw-rotate-x': '0',
+                     '--tw-rotate-y': '0',
+                     '--tw-rotate-3d': '0,0,0,0deg',
+                     '--tw-scale-z': '1',
+                     '--tw-translate-z': '0',
               }
        }
 });
