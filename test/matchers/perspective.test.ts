@@ -2,7 +2,7 @@ import { describe, it, expect } from '@jest/globals';
 import "../setup/toMatchCss.d";
 import { readFileSync } from 'fs';
 import path from 'path';
-import { getTailwindOutput, format } from '../setup/util';
+import { getTailwindOutput, format, loadTestCssFile } from '../setup/util';
 import matchCss from '../setup/matchCss';
 
 
@@ -21,7 +21,7 @@ describe('perspective Matcher', () => {
                      <div class="perspective-1600"></div>
               </div>`);
 
-              expect(result.css).toMatchCss(readFileSync(path.join(__dirname, 'perspective.test.css')).toString());
+              expect(result.css).toMatchCss(loadTestCssFile('perspective.test.css'));
        });
        it('returns correct classes for applied values', async () => {
 

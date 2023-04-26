@@ -4,27 +4,26 @@ import { getTailwindOutput, format } from '../setup/util';
 import matchCss from '../setup/matchCss';
 import { transform3dGpu } from '../../src/helpers/transform3d';
 
-describe('transform scale', () => {
+describe('transform flip', () => {
 
-       it('adds different transforms correctly', async () => {
+       it('flips correctly', async () => {
 
-              const output = await getTailwindOutput('<div class="transform scale-z-110 translate-z-96 rotate-x-60"></div>');
-
+              const output = await getTailwindOutput('<div class="transform flip-x flip-y flip-z"></div>');
+              //console.log(output.css);
               matchCss(output.css, `
-                     .rotate-x-60 {
-                            --tw-rotate-x: 60deg;
+                     .flip-x {
+                            --tw-rotate-x: 180deg;
                      }
-                     .translate-z-96 {
-                            --tw-translate-z: 24rem;
+                     .flip-y {
+                            --tw-rotate-y: 180deg;
                      }
-                     .scale-z-110 {
-                            --tw-scale-z: 1.1;
+                     .flip-z {
+                            --tw-rotate: 180deg;
                      }
                      .transform {
                             transform: ${transform3dGpu.transform};
                      }
               `);
        });
-
 
 });

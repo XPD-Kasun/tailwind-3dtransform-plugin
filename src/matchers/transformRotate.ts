@@ -2,11 +2,7 @@ import { PluginAPI } from "tailwindcss/types/config";
 import extendWithTransform from "../helpers/extendWithTransform";
 
 function toUnit(value: string): string {
-
-	if(/[^0-9]/.test(value)) {
-		return value;		
-	}
-	return `${value}deg`;
+	return value;
 }
 
 
@@ -31,13 +27,13 @@ function transformRotate(pluginAPI: PluginAPI) {
 		},
 		'rotate-3d': function(value) {
 			return extendWithTransform({
-				'--tw-rotate-3d': `rotate3d(${value})`
+				'--tw-rotate-3d': `${value}`
 			});
 		}
 	},{
 		supportsNegativeValues: true,		
 		values: pluginAPI.theme('rotate')
-	})
+	});
 
 }
 
