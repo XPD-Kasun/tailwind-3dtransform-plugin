@@ -5,6 +5,7 @@ import transformTranslate from './matchers/transformTranslate';
 import transformScale from './matchers/transformScale';
 import transformOverride from './matchers/transformOverride';
 import flip from './matchers/flip';
+import backfaceVisibility from './base/backfaceVisibility';
 
 
 const tailwind3dTransformPlugin = plugin((pluginAPI) => {
@@ -15,6 +16,7 @@ const tailwind3dTransformPlugin = plugin((pluginAPI) => {
        transformScale(pluginAPI);
        flip(pluginAPI);
        transformOverride(pluginAPI);
+       backfaceVisibility(pluginAPI);
 
 	pluginAPI.addBase({
 		':root': {
