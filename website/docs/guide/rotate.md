@@ -1,5 +1,6 @@
 ---
 sidebar_position: 3
+title: Rotate
 ---
 import CodeBlock from '../../src/components/CodeBlock';
 
