@@ -78,6 +78,12 @@
   border-color: #e5e7eb;
 }
 
+@media screen and (min-width: 997px) {
+  :root {
+    --ifm-font-size-base: 17px;
+  }
+}
+
 /** 
 
   Appending tailwindcss classes. We only add utilities and no base. Reason is base override 
