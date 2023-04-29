@@ -41,3 +41,24 @@
     --ifm-font-size-base: 17px;
   }
 }
+
+.full-width {
+  width: 100%;
+}
+
+.stripped-table {
+  display: table;
+  --ifm-table-cell-padding: 5px 10px;
+}
+
+.stripped-table thead td{
+  font-weight: bold;
+}
+
+.stripped-table tbody td:first-child{
+  color: rgb(18, 139, 195);
+}
+
+.stripped-table tbody td:last-child {
+  color: rgb(199, 17, 199);
+}
