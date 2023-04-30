@@ -13,8 +13,6 @@ it('renders backface visibility classes', async () => {
               <div class="backface-unset"></div>
        </div>`);
 
-       console.log(output.css);
-
        matchCss(output.css, `
               .backface-visible {
                      backface-visibility: visible;

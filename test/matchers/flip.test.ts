@@ -12,13 +12,16 @@ describe('transform flip', () => {
               //console.log(output.css);
               matchCss(output.css, `
                      .flip-x {
-                            --tw-rotate-x: 180deg;
-                     }
-                     .flip-y {
+                            --tw-rotate: 180deg;
                             --tw-rotate-y: 180deg;
                      }
-                     .flip-z {
+                     .flip-y {
                             --tw-rotate: 180deg;
+                            --tw-rotate-x: 180deg;
+                     }
+                     .flip-z {
+                            --tw-rotate-x: 180deg;
+                            --tw-rotate-y: 180deg;
                      }
                      .transform {
                             transform: ${transform3dGpu.transform};
