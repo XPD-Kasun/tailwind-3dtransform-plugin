@@ -62,3 +62,9 @@
 .stripped-table tbody td:last-child {
   color: rgb(199, 17, 199);
 }
+
+.table-container{
+  max-height: 500px;
+  overflow: auto;
+  margin-bottom: 30px;
+}
