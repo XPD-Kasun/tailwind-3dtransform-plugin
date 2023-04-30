@@ -7,24 +7,26 @@ Utilities for specifying the perspective for an element.
 
 import {linearInterpolateKeys} from '../../../src/helpers/interpolations'
 
-<table className="stripped-table" style={{width:'100%'}}>
-       <thead>
-              <tr>
-                     <td>Class</td>
-                     <td>Properties</td>                     
-              </tr>
-       </thead>
-       <tbody>
-              {
-                     Object.keys(linearInterpolateKeys(0, 1600, 200)).map((value) => (
-                            <tr>
-                                   <td>perspective-{value}</td>
-                                   <td>perspective: {value}px</td>
-                            </tr>
-                     ))
-              }
-       </tbody>
-</table>
+<div className="table-container">
+       <table className="stripped-table" style={{width:'100%'}}>
+              <thead>
+                     <tr>
+                            <td>Class</td>
+                            <td>Properties</td>                     
+                     </tr>
+              </thead>
+              <tbody>
+                     {
+                            Object.keys(linearInterpolateKeys(0, 1600, 200)).map((value) => (
+                                   <tr>
+                                          <td>perspective-{value}</td>
+                                          <td>perspective: {value}px</td>
+                                   </tr>
+                            ))
+                     }
+              </tbody>
+       </table>
+</div>
 
 ## Basic Usage
 

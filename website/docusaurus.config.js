@@ -71,8 +71,8 @@ const config = {
         },
         items: [
           { type: 'doc', docId: 'quick-start', label: 'Quick Start', position: 'right' },
-          { type: 'doc', docId: 'intro', label: 'Guide', position: 'right'},
-          { type: 'doc', docId: 'intro', label: 'Reference', position: 'right'},
+          { type: 'doc', docId: '/category/guide', label: 'Guide', position: 'right'},
+          { type: 'doc', docId: '/category/faq', label: 'Reference', position: 'right'},
           { href: 'https://tailwindcss.com/docs/installation', label: 'TailwindCSS Docs', position: 'right'},
           { href: 'https://github.com/XPD-Kasun/tailwind-3dtransform-plugin', html: '<img width="32" src="/img/GitHub-Mark.png" class="headerIcon"/>', position: 'right'}
         ],
