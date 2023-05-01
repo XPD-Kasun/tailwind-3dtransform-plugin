@@ -3,7 +3,6 @@ permissions:
   contents: write
   packages: read
 on:
-  push:
   workflow_dispatch:
 jobs:
   publish-npm:
