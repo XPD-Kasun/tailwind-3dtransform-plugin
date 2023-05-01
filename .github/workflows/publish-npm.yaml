@@ -1,4 +1,7 @@
 name: Publish To NPM
+permissions:   
+  contents: write
+  packages: read
 on:
   push:
   workflow_dispatch:
