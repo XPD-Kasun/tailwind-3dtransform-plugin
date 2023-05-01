@@ -10,6 +10,9 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: 18
+      - uses: phips28/gh-action-bump-version@v9.1.0
+        with:
+          version-type: patch
       - uses: JS-DevTools/npm-publish@v2
         with:
           token: ${{ secrets.NPM_TOKEN }}
