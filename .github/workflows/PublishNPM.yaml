@@ -3,10 +3,13 @@ on:
   push:
   workflow_dispatch:
 jobs:
-  publishNPM:
+  publish-npm:
     runs-on: ubuntu-latest
     steps:
-      - uses: ./.github/workflows/jest.yaml
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 18
       - uses: JS-DevTools/npm-publish@v1
         with:
           token: ${{ secrets.NPM_TOKEN }}
