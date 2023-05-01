@@ -15,7 +15,7 @@ jobs:
         with:
           version-type: patch
       - name: Build the plugin
-        run: npm build
+        run: npm run build
       - uses: JS-DevTools/npm-publish@v2
         with:
           token: ${{ secrets.NPM_TOKEN }}
