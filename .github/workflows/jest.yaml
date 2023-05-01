@@ -1,7 +1,9 @@
 name: Run Tests
 on:
   push:
-    branches-ignore: 'docs'
+    branches-ignore: 
+     - docs
+     - github-action-setup
   workflow_dispatch: 
   workflow_call:
 jobs:
