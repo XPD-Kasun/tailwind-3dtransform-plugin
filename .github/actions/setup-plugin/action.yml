@@ -3,9 +3,9 @@ runs:
   using: "composite"
   steps:
     - uses: actions/setup-node@v3
-        with: 
+      with: 
           node-version: 18
           cache: 'npm'
     - name: install npm packages
-        run: |
-          npm install
+      run: |
+        npm install
