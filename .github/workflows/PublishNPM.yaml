@@ -6,7 +6,7 @@ jobs:
   publishNPM:
     runs-on: ubuntu-latest
     steps:
-      - uses: ./github/workflows/jest.yaml
+      - uses: ./.github/workflows/jest.yaml
       - uses: JS-DevTools/npm-publish@v1
         with:
           token: ${{ secrets.NPM_TOKEN }}
