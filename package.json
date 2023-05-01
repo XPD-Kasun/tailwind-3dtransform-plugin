@@ -1,6 +1,6 @@
 {
   "name": "@xpd/tailwind-3dtransforms",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Tailwind plugin to enable css 3d transforms properties for tailwind.",
   "main": "dist/index.js",
   "files": [
