@@ -6,6 +6,6 @@ runs:
       with: 
           node-version: 18
           cache: 'npm'
-    - name: install npm packages
-      run: |
-        npm install
+    - name: Install NPM dependancies
+      run: npm install
+      
