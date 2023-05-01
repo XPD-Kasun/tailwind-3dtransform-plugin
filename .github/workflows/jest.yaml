@@ -9,6 +9,7 @@ jobs:
   jest:
     runs-on: ubuntu-latest
     steps:
+    - uses: actions/checkout@v3
     - uses: ./.github/actions/setup-plugin
     - name: testing using jest
       run: npm test
