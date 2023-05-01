@@ -1,0 +1,9 @@
+name: Publish To NPM
+on:
+  workflow_dispatch:
+jobs:
+  publishNPM:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: ./github/workflows/jest.yaml
+    
