@@ -14,6 +14,8 @@ jobs:
       - uses: phips28/gh-action-bump-version@v9.1.0
         with:
           version-type: patch
+      - name: Build the plugin
+        run: npm build
       - uses: JS-DevTools/npm-publish@v2
         with:
           token: ${{ secrets.NPM_TOKEN }}
