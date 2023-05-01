@@ -3,6 +3,7 @@ on:
   push:
     branches-ignore: 'docs'
   workflow_dispatch: 
+  workflow_call:
 jobs:
   jest:
     runs-on: ubuntu-latest
