@@ -7,5 +7,6 @@ runs:
           node-version: 18
           cache: 'npm'
     - name: Install NPM dependancies
+      shell: bash
       run: npm install
       
