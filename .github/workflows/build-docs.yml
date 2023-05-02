@@ -4,7 +4,6 @@ on:
     branches:
       - docs
       - main
-      - github-action-setup
     paths:
       - .github/workflows/build-docs.yml
       - website/**
@@ -21,7 +20,7 @@ jobs:
         with:
           node-version: 18
       - name: Install And Build
-        working-directory: website
+        working-directory: ./website
         run: |
           npm install
           npm run build
@@ -30,9 +29,3 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./website/build
-
-
-
-    
-      
-      
