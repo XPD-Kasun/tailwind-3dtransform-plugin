@@ -4,9 +4,10 @@ on:
     branches:
       - docs
       - main
+      - github-action-setup
     paths:
-      - '.github/workflows/build-docs.yml'
-      - 'website/**'
+      - .github/workflows/build-docs.yml
+      - website/**
   pull_request:
     branches:
       - main
