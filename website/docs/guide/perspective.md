@@ -35,47 +35,29 @@ import {linearInterpolateKeys} from '../../../src/helpers/interpolations'
 You can use `perspective-` classes on the **parent** to set the desired perspective value for the child. 
 
 <CodeBlock className="my-10">
-<div className="flex">
-  <div className="perspective-400">
-    <div className="transform rotate-y-30 max-w-sm p-6 bg-white border border-gray-400 rounded-lg shadow ">
-      <svg className="w-10 h-10 mb-2 text-gray-500" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
-        xmlns="http://www.w3.org/2000/svg">
-        <path fillRule="evenodd"
-          d="M5 5a3 3 0 015-2.236A3 3 0 0114.83 6H16a2 2 0 110 4h-5V9a1 1 0 10-2 0v1H4a2 2 0 110-4h1.17C5.06 5.687 5 5.35 5 5zm4 1V5a1 1 0 10-1 1h1zm3 0a1 1 0 10-1-1v1h1z"
-          clipRule="evenodd"></path>
-        <path d="M9 11H3v5a2 2 0 002 2h4v-7zM11 18h4a2 2 0 002-2v-5h-6v7z"></path>
-      </svg>
-      <h5 className="mb-2 text-2xl font-semibold text-gray-900">perspective-400</h5>
-      <p>transform rotate-y-30</p>
-    </div>
-  </div>
-  <div className="perspective-800">
-    <div className="transform rotate-y-30 max-w-sm p-6 bg-white border border-gray-400 rounded-lg shadow ">
-      <svg class="w-10 h-10 mb-2 text-gray-500" fill="currentColor" viewBox="0 0 20 20"
-        xmlns="http://www.w3.org/2000/svg">
-        <path fillRule="evenodd"
-          d="M5 5a3 3 0 015-2.236A3 3 0 0114.83 6H16a2 2 0 110 4h-5V9a1 1 0 10-2 0v1H4a2 2 0 110-4h1.17C5.06 5.687 5 5.35 5 5zm4 1V5a1 1 0 10-1 1h1zm3 0a1 1 0 10-1-1v1h1z"
-          clipRule="evenodd"></path>
-        <path d="M9 11H3v5a2 2 0 002 2h4v-7zM11 18h4a2 2 0 002-2v-5h-6v7z"></path>
-      </svg>
-      <h5 Name="mb-2 text-2xl font-semibold text-gray-900">perspective-800</h5>
-      <p>transform rotate-y-30</p>
-    </div>
-  </div>
-  <div className="perspective-1600">
-    <div className="transform rotate-y-30 max-w-sm p-6 bg-white border border-gray-400 rounded-lg shadow ">
-      <svg className="w-10 h-10 mb-2 text-gray-500" fill="currentColor" viewBox="0 0 20 20"
-        xmlns="http://www.w3.org/2000/svg">
-        <path fillRule="evenodd"
-          d="M5 5a3 3 0 015-2.236A3 3 0 0114.83 6H16a2 2 0 110 4h-5V9a1 1 0 10-2 0v1H4a2 2 0 110-4h1.17C5.06 5.687 5 5.35 5 5zm4 1V5a1 1 0 10-1 1h1zm3 0a1 1 0 10-1-1v1h1z"
-          clipRule="evenodd"></path>
-        <path d="M9 11H3v5a2 2 0 002 2h4v-7zM11 18h4a2 2 0 002-2v-5h-6v7z"></path>
-      </svg>
-      <h5 className="mb-2 text-2xl font-semibold text-gray-900">perspective-1600</h5>
-      <p>transform rotate-y-30</p>
-    </div>
-  </div>
-</div>
+       <div className="flex">
+              <div className="perspective-400">
+                     <div class="transform rotate-y-30 max-w-sm p-6 bg-white border border-gray-400 rounded-lg shadow ">
+                            <svg class="w-10 h-10 mb-2 text-gray-500" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5 5a3 3 0 015-2.236A3 3 0 0114.83 6H16a2 2 0 110 4h-5V9a1 1 0 10-2 0v1H4a2 2 0 110-4h1.17C5.06 5.687 5 5.35 5 5zm4 1V5a1 1 0 10-1 1h1zm3 0a1 1 0 10-1-1v1h1z" clip-rule="evenodd"></path><path d="M9 11H3v5a2 2 0 002 2h4v-7zM11 18h4a2 2 0 002-2v-5h-6v7z"></path></svg>
+                            <h5 class="mb-2 text-2xl font-semibold text-gray-900">perspective-400</h5>
+                            <p>transform rotate-y-30</p>
+                     </div>
+              </div>
+              <div className="perspective-800">
+                     <div class="transform rotate-y-30 max-w-sm p-6 bg-white border border-gray-400 rounded-lg shadow ">
+                            <svg class="w-10 h-10 mb-2 text-gray-500" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5 5a3 3 0 015-2.236A3 3 0 0114.83 6H16a2 2 0 110 4h-5V9a1 1 0 10-2 0v1H4a2 2 0 110-4h1.17C5.06 5.687 5 5.35 5 5zm4 1V5a1 1 0 10-1 1h1zm3 0a1 1 0 10-1-1v1h1z" clip-rule="evenodd"></path><path d="M9 11H3v5a2 2 0 002 2h4v-7zM11 18h4a2 2 0 002-2v-5h-6v7z"></path></svg>
+                            <h5 class="mb-2 text-2xl font-semibold text-gray-900">perspective-800</h5>
+                            <p>transform rotate-y-30</p>
+                     </div>
+              </div>
+              <div className="perspective-1600">
+                     <div class="transform rotate-y-30 max-w-sm p-6 bg-white border border-gray-400 rounded-lg shadow ">
+                            <svg class="w-10 h-10 mb-2 text-gray-500" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5 5a3 3 0 015-2.236A3 3 0 0114.83 6H16a2 2 0 110 4h-5V9a1 1 0 10-2 0v1H4a2 2 0 110-4h1.17C5.06 5.687 5 5.35 5 5zm4 1V5a1 1 0 10-1 1h1zm3 0a1 1 0 10-1-1v1h1z" clip-rule="evenodd"></path><path d="M9 11H3v5a2 2 0 002 2h4v-7zM11 18h4a2 2 0 002-2v-5h-6v7z"></path></svg>
+                            <h5 class="mb-2 text-2xl font-semibold text-gray-900">perspective-1600</h5>
+                            <p>transform rotate-y-30</p>
+                     </div>
+              </div>
+       </div>
 </CodeBlock>
 
 ```html title="Effect of using different perspective values"
@@ -102,6 +84,12 @@ You can use `perspective-` classes on the **parent** to set the desired perspect
 </div>
 
 ```
+
+:::info
+You can use responsive modifiers to target only certain media queries. For example, `md:perspective-800` will only add perspective property on medium or higher responsive breakpoints.
+:::
+
+
 
 ## Customizing Your Theme
 
