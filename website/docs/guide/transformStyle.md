@@ -30,14 +30,14 @@ Utilities for setting transform style css property.
 
 ## Basic Usage
 
-Use `transform-flatstyle` or any of above classes to set the transform box property. [See more on transform box from MDN reference](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-box)
-
-As the reference suggests, a good example for using this property is [this codepen](https://codepen.io/giaco/pen/OwowJQ).
+Use `transform-flatstyle` or any of above classes to set the transform box property. [See more on transform box from MDN reference](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-style)
 
 For example you can use,
 
 ```html
-<div class="transform-fillbox">
+<div class="transform-style-3d">
        <!--Some elementes-->
 </div>
 ```
+
+To add `transform-style: preserve-3d;` to set the transform style.
