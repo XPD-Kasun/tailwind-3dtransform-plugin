@@ -7,11 +7,11 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Tailwind 3dtransform Plugin',
-  tagline: 'Enable 3d transform classes for tailwind',
+  tagline: 'Enable 3d transform classes for tailwindcss',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-test-site.com',
+  url: 'https://xpd-kasun.github.io/',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -39,19 +39,14 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          routeBasePath: '/', 
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/XPD-Kasun/tailwind-3dtransform-plugin',
         },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        },
+        blog: false,
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -63,7 +58,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      image: 'https://repository-images.githubusercontent.com/631366890/9371b3cf-db9a-43e7-ad10-034f2578f2e0',
       navbar: {
         title: 'Tailwind 3d Transform Plugin',
         logo: {
@@ -85,8 +80,16 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: 'Quick Start',
+                to: '/',
+              },
+              {
+                label: 'Guides',
+                to: '/category/guide',
+              },
+              {
+                label: 'FAQ',
+                to: '/category/faq',
               },
             ],
           },
@@ -94,30 +97,23 @@ const config = {
             title: 'Community',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
-              },
+                label: 'GitHub',
+                href: 'https://github.com/XPD-Kasun/tailwind-3dtransform-plugin',
+              }
             ],
           },
           {
             title: 'More',
             items: [
               {
-                label: 'Blog',
-                to: '/blog',
+                label: 'Tailwind Docs',
+                href: 'https://tailwindcss.com/docs',
               },
               {
-                label: 'GitHub',
-                href: 'https://github.com/XPD-Kasun/tailwind-3dtransform-plugin',
+                label: 'MDN CSS Reference',
+                href: 'https://developer.mozilla.org/en-US/docs/Web/CSS',
               },
+              
             ],
           },
         ],

@@ -36,4 +36,4 @@ So in order to make this plugin to work we need to modify the above html to incl
 
 This is important and if you find transforms are not applied, then, checking whether the class list contains `transform` is the first thing to do.
 
-If you think this should be changed and implicit transform property should be applied instead, please vote here at [tailwind-3dtransform-plugin](dsf) repository.
+If you think this should be changed and implicit transform property should be applied instead, please vote here at [tailwind-3dtransform-plugin](https://github.com/XPD-Kasun/tailwind-3dtransform-plugin/issues/2) repository.

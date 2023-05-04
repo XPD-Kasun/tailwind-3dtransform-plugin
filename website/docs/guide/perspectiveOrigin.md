@@ -42,7 +42,7 @@ Utilities for setting perspective origin css property.
 
 ## Basic Usage
 
-Use perspective-origin classes set the perspective origin property which is used to determine the position at which the viewer is looking. [See more on perspective origin from MDN reference](https://developer.mozilla.org/en-US/docs/Web/CSS/perspective-origin). This is used along with [perspective](/docs/guide/perspective) class.
+Use perspective-origin classes set the perspective origin property which is used to determine the position at which the viewer is looking. [See more on perspective origin from MDN reference](https://developer.mozilla.org/en-US/docs/Web/CSS/perspective-origin). This is used along with [perspective](/guide/perspective) class.
 
 For instance you can use,
 

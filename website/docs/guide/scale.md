@@ -2,6 +2,7 @@
 sidebar_position: 4
 title: Scale
 ---
+import CodeBlock from '../../src/components/CodeBlock';
 
 # Scale
 
@@ -36,32 +37,56 @@ Utilities for scaling an element on all three axis.
        </table>
 </div>
 
-For instance, `scale-x-110` and `scale-z-50` generates a class that is equal to the following class,
-
-```css
-.scale-x-110 {
-       transform: scale3d(1.1, 1, 1);
-}
-.scale-z-50 {
-       transform: scale3d(1, 1, 0.5);
-}
-```
-
-Note that, although above css classes uses transform property, actual generated classes will utilize css variables so that you can use multiple transform classes on the same element. For example consider, 
-
-```html
-<div class="scale-x-50 rotate-x-60"></div>
-```
-This is possible since we use css variables instead of using `transform` property directly. Due to this nature, its important to manually add `transform` class to your element's class list as follows.
-
-```html
-<div class="transform scale-x-50 rotate-x-60"></div>
-```
-
 
 ## Basic Usage
 
-Use the `scale-(axis)-value` to set the rotation for an element. You can use multiple `scale` classes with different axis to transform elements on targetted axis.
+You can apply scaling on all axes. For instance to apply 0.5 scaling on x and 2 scaling on y, you can use following classes,
+
+```html
+<div class="scale-x-50 scale-y-200"><!--Some Content--></div>
+```
+:::info Remember to add transform class
+
+Plugin requires you to add `transform` class along with other transform classes to apply the effect.<br/>
+For example, instead of `scale-x-110`, use `transform scale-x-110`.<br/>
+Read more on this [here](/faq/whyTransform).
+
+:::
+
+<CodeBlock className="my-10">
+<div className="perspective-1000">
+  <div className="flex space-x-10">  
+    <div className="w-52 h-52 bg-teal-400 rounded-xl flex text-white font-bold text-xl justify-center items-center">No Transform</div>
+    <div className="w-52 h-52 bg-teal-400 rounded-xl flex text-white font-bold text-xl flex-col justify-center items-center scale-x-[0.8] scale-y-110 transform">
+      <div>scale-x-[0.8]</div>
+      <div>scale-y-110</div>
+    </div>
+    <div className="w-52 h-52 bg-teal-400 rounded-xl flex text-white font-bold text-xl flex-col justify-center items-center scale-x-110 scale-y-[0.8] scale-z-110 transform">
+      <div>scale-x-110</div>
+      <div>scale-y-[0.8]</div>
+      <div>scale-z-110</div>
+    </div>
+  </div>
+</div>
+</CodeBlock>
+
+```html title="Applying different scale classes"
+
+<div className="perspective-1000">
+  <div className="flex space-x-10">  
+    <div className="w-52 h-52">No Transform</div>
+    <div className="w-52 h-52 scale-x-[0.8] scale-y-110 transform">
+      <div>scale-x-[0.8]</div>
+      <div>scale-y-110</div>
+    </div>
+    <div className="w-52 h-52 scale-x-110 scale-y-[0.8] scale-z-110 transform">
+      <div>scale-x-110</div>
+      <div>scale-y-[0.8]</div>
+      <div>scale-z-110</div>
+    </div>
+  </div>
+</div>
+```
 
 ## Customizing Your Theme
 
@@ -89,3 +114,11 @@ If you need to use an custom value for scale, you can use the following method.
 ```
 
 Learn more about arbitrary value support in the tailwindcss [arbitrary values](https://tailwindcss.com/docs/adding-custom-styles#using-arbitrary-values) documentation.
+
+## Read More
+
+To learn more about scale css transform refer [here](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/scale3d).
+
+:::info
+You can use modifiers such as `md:scale-x-60` to target media queries, hover, active... etc. You can read about modifiers [here](https://tailwindcss.com/docs/hover-focus-and-other-states).
+:::

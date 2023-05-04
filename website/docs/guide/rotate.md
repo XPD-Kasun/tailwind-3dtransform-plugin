@@ -8,34 +8,34 @@ import CodeBlock from '../../src/components/CodeBlock';
 Utilities for rotating an element on all three axis.
 
 <div className="table-container">
-       <table className="stripped-table" style={{width:'100%'}}>
-              <thead>
-                     <tr>
-                            <td>Class</td>
-                            <td>Properties</td>                     
-                     </tr>
-              </thead>
-              <tbody>
-                     {
-                            [0, 1, 2, 3, 6, 12, 30, 45, 60, 90, 135, 180, 270].map((value, i1) => {
-                                   return <React.Fragment key={i1}>
-                                          {
-                                                 ['x', 'y', 'z'].map((axis, i2) => (
-                                                        <tr key={i1 + ' ' + i2}>
-                                                               <td>rotate-{axis}-{value}</td>
-                                                               <td>transform: rotate{axis.toUpperCase()}({value}deg);</td>
-                                                        </tr>
-                                                 ))
-                                          }
-                                          </React.Fragment>
-                            })
-                     }              
-                     <tr>
-                            <td>rotate-3d-[1,0,1,30deg]</td>
-                            <td>transform: rotate3d(1,0,1,30deg);</td>
-                     </tr>
-              </tbody>
-       </table>
+  <table className="stripped-table" style={{width:'100%'}}>
+    <thead>
+      <tr>
+            <td>Class</td>
+            <td>Properties</td>                     
+      </tr>
+    </thead>
+    <tbody>
+      {
+        [0, 1, 2, 3, 6, 12, 30, 45, 60, 90, 135, 180, 270].map((value, i1) => {
+          return <React.Fragment key={i1}>
+            {
+              ['x', 'y', 'z'].map((axis, i2) => (
+                <tr key={i1 + ' ' + i2}>
+                        <td>rotate-{axis}-{value}</td>
+                        <td>transform: rotate{axis.toUpperCase()}({value}deg);</td>
+                </tr>
+              ))
+            }
+            </React.Fragment>
+        })
+      }              
+      <tr>
+        <td>rotate-3d-[1,0,1,30deg]</td>
+        <td>transform: rotate3d(1,0,1,30deg);</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 
 ## Basic Usage
@@ -46,7 +46,7 @@ Rotation classes are used to rotate an element relative to an axis. The rotation
 
 Plugin requires you to add `transform` class along with other transform classes to apply the effect.<br/>
 For example, instead of `rotate-x-45`, use `transform rotate-x-45`.<br/>
-Read more on this [here](/docs/faq/whyTransform).
+Read more on this [here](/faq/whyTransform).
 
 :::
 
@@ -73,7 +73,7 @@ Read more on this [here](/docs/faq/whyTransform).
 </div>
 </CodeBlock>
 
-```html title="Using rotation classes for cards (Above cards use hover: to apply rotation on hover. We excude it for simplicity)"
+```html title="Using rotation classes for cards (Above cards use hover: to apply rotation on hover. We exclude it for simplicity)"
 <div class="flex">
   <div class="perspective-800">
     <div class="transform rotate-y-30">
@@ -95,6 +95,26 @@ Read more on this [here](/docs/faq/whyTransform).
 
 Here in this card example, we use multiple perspective containers. Instead, you can add perspective to the flex container above and make cards direct children of flex container also. But then the same perspective will effect all three cards. Here we provide separate perspective containers to each card. This choice depends on your requirements and goals.
 
+## Using rotate-3d class
+
+It certain situation, you might need to directly leverage functionality of rotate-3d transform function. 
+For this, we have provided `rotate-3d` class which you can use freely to specify the value you need and achieve the full control over rotate-3d function.
+
+For instance, to implement following css,
+
+```css
+  .some-class {
+    transform: rotate-3d(1,1,0,20deg);
+  }
+```
+
+you can use `rotate-3d` class as follows,
+
+```html
+<div class="rotate-3d-[1,1,0,20deg]">content...</div>
+```
+
+This class is does not support theme defaults. Instead, it works only with arbitrary values provided in the correct format.
 
 ## Customizing Your Theme
 
@@ -122,3 +142,11 @@ If you need to use an custom value for rotation, you can use the following synta
 ```
 
 Learn more about arbitrary value support in the tailwindcss [arbitrary values](https://tailwindcss.com/docs/adding-custom-styles#using-arbitrary-values) documentation.
+
+## Read More
+
+To learn more about rotate css transform refer [here](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotate).
+
+:::info
+You can use modifiers such as `md:rotate-x-60` to target media queries, hover, active... etc. You can read about modifiers [here](https://tailwindcss.com/docs/hover-focus-and-other-states).
+:::

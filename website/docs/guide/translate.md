@@ -2,6 +2,7 @@
 sidebar_position: 5
 title: Translate
 ---
+import CodeBlock from '../../src/components/CodeBlock';
 
 # Translate
 
@@ -39,7 +40,13 @@ Utilities for translating an element on all three axis.
 
 ## Basic Usage
 
-Use `translate-(axis)-value` to set the rotation for an element. Also, you need to add `transform` class to apply the transformations.
+You can translate on all axes using different `translate` classes provided. Default translate values are supported. For instance to translate 4rem on x axis and 20px on y axis, you can use,
+
+```html
+<div class="transform tranlate-x-20 translate-y-[20px]"><!--Some Content--></div>
+```
+
+This is another example using tailwind defaults,
 
 ```html
 <div class="perspective-1200">
@@ -47,6 +54,52 @@ Use `translate-(axis)-value` to set the rotation for an element. Also, you need 
 </div>
 ```
 
+:::info Remember to add transform class
+
+Plugin requires you to add `transform` class along with other transform classes to apply the effect.<br/>
+For example, instead of `translate-y-20`, use `transform translate-y-20`.<br/>
+Read more on this [here](/faq/whyTransform).
+
+:::
+
+<CodeBlock className="my-10">
+  <div className="flex space-x-10">
+    <div className="w-52 h-52 bg-yellow-200 rounded-lg relative">
+      <div className="w-20 h-20 bg-teal-400 rounded-lg">    
+      </div>
+      <div className="absolute bottom-2 text-center w-full">No transforms</div>
+    </div>
+    <div className="w-52 h-52 bg-yellow-200 rounded-lg relative">
+      <div className="w-20 h-20 bg-teal-400 rounded-lg transform translate-x-10 translate-y-16">    
+      </div>
+      <div className="absolute bottom-2 text-center w-full">translate-x-10<br/>translate-y-16</div>
+    </div>
+    <div className="perspective-1000">
+      <div className="w-52 h-52 bg-yellow-200 rounded-lg relative transform rotate-x-30">
+        <div className="w-20 h-20 bg-teal-400 rounded-lg transform translate-x-10 translate-y-16 translate-z-10">    
+        </div>
+        <div className="absolute bottom-2 text-center w-full">translate-x-10<br/>translate-y-16<br/>translate-z-10</div>
+      </div>
+    </div>
+  </div>
+</CodeBlock>
+
+```html title="Applying different classes for translate"
+<div class="flex space-x-10">
+  <div class="w-52 h-52">
+    <div class="w-20 h-20">    
+    </div>
+  </div>
+  <div class="w-52 h-52">
+    <div class="w-20 h-20 transform translate-x-10 translate-y-16">    
+    </div>
+  </div>
+  <div class="w-52 h-52 transform rotate-x-30">
+    <div class="w-20 h-20 transform translate-x-10 translate-y-16 translate-z-10">    
+    </div>
+  </div>
+</div>
+```
 
 ## Customizing Your Theme
 
@@ -74,3 +127,11 @@ If you need to use an custom value for translate, you can use the following synt
 ```
 
 Learn more about arbitrary value support in the tailwindcss [arbitrary values](https://tailwindcss.com/docs/adding-custom-styles#using-arbitrary-values) documentation.
+
+## Read More
+
+To learn more about css translate transform refer [here](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/translate3d).
+
+:::info
+You can use modifiers such as `md:translate-x-60` to target media queries, hover, active... etc. You can read about modifiers [here](https://tailwindcss.com/docs/hover-focus-and-other-states).
+:::
