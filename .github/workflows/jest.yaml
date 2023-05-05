@@ -1,17 +1,18 @@
-name: jest test runner
+name: Run Tests
 on:
+  pull_request:
+    branches:
+      - main
   push:
-    branches-ignore: 'docs'
-  workflow_dispatch: 
+    branches-ignore: 
+     - docs
+     - github-action-setup
+  workflow_dispatch:
 jobs:
   jest:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@2.5.2
-        with: 
-          node-version: latest
-      - name: install npm packages
-        run: |
-          npm install
-          npm test
+    - uses: actions/checkout@v3
+    - uses: ./.github/actions/setup-plugin
+    - name: testing using jest
+      run: npm test

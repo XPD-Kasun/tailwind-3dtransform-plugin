@@ -1,0 +1,22 @@
+name: Publish To NPM
+permissions:   
+  contents: write
+  packages: read
+on:
+  workflow_dispatch:
+jobs:
+  publish-npm:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ./.github/actions/setup-plugin
+      - uses: phips28/gh-action-bump-version@v9.1.0
+        with:
+          version-type: patch
+          skip-tag: true
+      - name: Build The Plugin
+        run: npm run build
+      - uses: JS-DevTools/npm-publish@v2
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
+          dry-run: true

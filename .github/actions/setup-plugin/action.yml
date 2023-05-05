@@ -1,0 +1,12 @@
+name: Setup nodejs and install the dependancies
+runs:
+  using: "composite"
+  steps:
+    - uses: actions/setup-node@v3
+      with: 
+          node-version: 18
+          cache: 'npm'
+    - name: Install NPM dependancies
+      shell: bash
+      run: npm install
+      
