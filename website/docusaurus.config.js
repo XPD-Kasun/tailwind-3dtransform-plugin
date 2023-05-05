@@ -11,10 +11,10 @@ const config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://xpd-kasun.github.io/',
+  url: 'https://xpd-kasun.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/tailwind-3dtransform-plugin/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
