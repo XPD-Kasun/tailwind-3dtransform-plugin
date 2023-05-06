@@ -6,4 +6,5 @@
 - Autocomplete intellisense support for tailwind plugin.
 - SEO stuff on documentation
 - Adding support on direct css properties like, rotate (not to be confused with rotate css function which is used with transform key).
-- Write integrate tests. 
+- Write integrate tests.
+- Add labels for CI/CD
