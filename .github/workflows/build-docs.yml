@@ -30,13 +30,11 @@ jobs:
         run: |
           npm install
           npm run build
-      - name: Checkout From gh-pages
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Upload Build As Artifact
+        uses: upload-pages-artifact@v1.0.8
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./website/build
-          force_orphan: true
-          allow_empty_commit: true
+          name: 'github-pages'
+          path: 'website/build'
           
   deploy:
     runs-on: ubuntu-latest
