@@ -1,7 +1,7 @@
 {
   "name": "@xpd/tailwind-3dtransforms",
-  "version": "1.0.5",
-  "description": "Tailwind plugin to enable css 3d transforms properties for tailwind.",
+  "version": "1.0.3",
+  "description": "Tailwind plugin to enable css 3d transforms for tailwind.",
   "main": "dist/index.js",
   "files": [
     "dist"
@@ -20,10 +20,11 @@
     "perspective",
     "transform",
     "3d",
-    "rotate3d",
-    "rotatez",
-    "rotatex",
-    "rotatey"
+    "rotate",
+    "translate",
+    "scale",
+    "flip",
+    "perspective origin"
   ],
   "author": "XPD",
   "license": "MIT",
