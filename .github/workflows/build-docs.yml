@@ -7,6 +7,7 @@ on:
     branches:
       - docs
       - main
+      - workflows
     paths:
       - .github/workflows/build-docs.yml
       - website/**
@@ -14,12 +15,13 @@ on:
     branches:
       - main
 jobs:
-  deploy:
+  build-docs:
+    name: Building Docs
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
         with:
-          ref: docs
+          ref: ${{ github.head_ref || 'main' }}
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
@@ -29,8 +31,23 @@ jobs:
         run: |
           npm install
           npm run build
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Upload Build As Artifact
+        uses: actions/upload-pages-artifact@v1.0.8
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./website/build
+          name: 'github-pages'
+          path: 'website/build'
+          retention-days: '1'
+          
+  deploy:
+    runs-on: ubuntu-latest
+    environment:      
+        name: github-pages
+        url: ${{ steps.deploy.outputs.page_url }}
+    needs: [build-docs]
+    permissions:
+      pages: write
+      id-token: write
+    steps:
+      - name: Deployment To Pages
+        uses: actions/deploy-pages@v2
+        id: deploy

@@ -4,6 +4,12 @@ permissions:
   packages: read
 on:
   workflow_dispatch:
+    inputs:
+      shouldBumpVersion:
+        description: 'Should this workflow bump the version of package.json?'
+        default: false
+        type: boolean
+
 jobs:
   publish-npm:
     runs-on: ubuntu-latest
@@ -11,6 +17,7 @@ jobs:
       - uses: actions/checkout@v3
       - uses: ./.github/actions/setup-plugin
       - uses: phips28/gh-action-bump-version@v9.1.0
+        if: ${{ inputs.shouldBumpVersion }}
         with:
           version-type: patch
           skip-tag: true
