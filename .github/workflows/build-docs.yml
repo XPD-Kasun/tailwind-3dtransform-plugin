@@ -35,6 +35,9 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./website/build
+          force_orphan: true
+          allow_empty_commit: true
+          
   deploy:
     runs-on: ubuntu-latest
     environment:      
