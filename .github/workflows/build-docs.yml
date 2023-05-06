@@ -14,7 +14,8 @@ on:
     branches:
       - main
 jobs:
-  deploy:
+  build-docs:
+    name: Building Docs
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -29,8 +30,23 @@ jobs:
         run: |
           npm install
           npm run build
-      - name: Deploy
+      - name: Checkout From gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./website/build
+  deploy:
+    runs-on: ubuntu-latest
+    environment:      
+        name: github-pages
+        url: ${{ steps.deploy.outputs.page_url }}
+    needs: [build-docs]
+    permissions:
+      pages: write
+      id-token: write
+    steps:
+      - name: Deployment To Pages
+        uses: actions/deploy-pages@v2
+        id: deploy
+
+
