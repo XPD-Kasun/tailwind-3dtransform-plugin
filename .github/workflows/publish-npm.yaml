@@ -9,7 +9,11 @@ on:
         description: 'Should this workflow bump the version of package.json?'
         default: false
         type: boolean
-
+      dryrun:
+        description: 'Use dry run?'
+        default: true
+        type: boolean
+        
 jobs:
   publish-npm:
     runs-on: ubuntu-latest
@@ -26,4 +30,4 @@ jobs:
       - uses: JS-DevTools/npm-publish@v2
         with:
           token: ${{ secrets.NPM_TOKEN }}
-          dry-run: true
+          dry-run: ${{ inputs.dryrun }}
