@@ -4,9 +4,8 @@ on:
     branches:
       - main
   push:
-    branches-ignore: 
-     - docs
-     - github-action-setup
+    branches: 
+     - main
   workflow_dispatch:
 jobs:
   jest:

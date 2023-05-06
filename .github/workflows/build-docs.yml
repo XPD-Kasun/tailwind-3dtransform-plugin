@@ -7,6 +7,7 @@ on:
     branches:
       - docs
       - main
+      - workflows
     paths:
       - .github/workflows/build-docs.yml
       - website/**
@@ -20,7 +21,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          ref: docs
+          ref: ${{ github.head_ref || 'main' }}
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
@@ -31,7 +32,7 @@ jobs:
           npm install
           npm run build
       - name: Upload Build As Artifact
-        uses: upload-pages-artifact@v1.0.8
+        uses: actions/upload-pages-artifact@v1.0.8
         with:
           name: 'github-pages'
           path: 'website/build'
