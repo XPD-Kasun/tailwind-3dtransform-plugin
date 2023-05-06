@@ -1,4 +1,7 @@
 name: Build Documentation Website
+permissions:   
+  contents: write
+  packages: read
 on:
   push:
     branches:
