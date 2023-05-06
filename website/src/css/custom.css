@@ -13,19 +13,22 @@
   --ifm-color-primary-light: #1796ad;
   --ifm-color-primary-lighter: #189cb5;
   --ifm-color-primary-lightest: #1bb1cc;
-  --docusaurus-highlighted-code-line-bg: rgb(181 231 255);
+  --docusaurus-highlighted-code-line-bg: rgb(181 231 255 / 25%);
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #15889d;
-  --ifm-color-primary-dark: #137a8d;
-  --ifm-color-primary-darker: #127485;
-  --ifm-color-primary-darkest: #0f5f6e;
-  --ifm-color-primary-light: #1796ad;
-  --ifm-color-primary-lighter: #189cb5;
-  --ifm-color-primary-lightest: #1bb1cc;
-  --docusaurus-highlighted-code-line-bg: rgb(100, 100, 100);
+  --ifm-color-primary: #6cd9ed;
+  --ifm-color-primary-dark: #4dd1e9;
+  --ifm-color-primary-darker: #3ecde7;
+  --ifm-color-primary-darkest: #1abad7;
+  --ifm-color-primary-light: #8be1f1;
+  --ifm-color-primary-lighter: #9ae5f3;
+}
+
+[data-theme='dark'] .navbar__title {
+  font-size: 20px;
+  color: #6cd9ed;
 }
 
 .navbar__title {
@@ -57,8 +60,16 @@
   font-weight: bold;
 }
 
+[data-theme='dark'] .stripped-table tbody td:first-child{
+  color: rgb(134 209 233);
+}
+
 .stripped-table tbody td:first-child{
   color: rgb(18, 139, 195);
+}
+
+[data-theme='dark'] .stripped-table tbody td:last-child {
+  color: rgb(255 182 255);
 }
 
 .stripped-table tbody td:last-child {
@@ -82,6 +93,23 @@
   :root {
     --ifm-font-size-base: 17px;
   }
+}
+
+.github-logo {  
+  color: red;
+}
+
+[data-theme='dark'] .github-logo {
+  background-image: url('/img/github-mark-dark.svg');
+}
+
+.github-logo {
+  content: '';
+  display: block;  
+  background: url('/img/github-mark.svg');
+  background-size: cover;
+  width:20px;
+  height: 20px;
 }
 
 /** 

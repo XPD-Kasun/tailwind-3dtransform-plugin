@@ -59,30 +59,33 @@ Read more on this [here](/faq/whyTransform).
        <div class="flip-y">This one is flipped on y axis</div>
 </div>
 ```
+
+import stefansPhoto from '@site/static/img/stefan-stefancik-Ue2-23uBwNw-unsplash.jpg';
+
 <CodeBlock className="my-10">
   <div className="md:flex gap-5">
     <div className="mb-10 md:mb-0">
       <div className="font-bold text-lg mb-5 text-center">No Transforms</div>
       <div className="w-52 rounded-xl shadow-xl overflow-hidden flex mx-auto">
-        <img className="object-cover" src="/img/stefan-stefancik-Ue2-23uBwNw-unsplash.jpg" />
+        <img className="object-cover" src={stefansPhoto} />
       </div>
     </div>
     <div className="mb-10 md:mb-0">
       <div className="font-bold text-lg mb-5 text-center">transform flip-y</div>
       <div className="w-52 rounded-xl shadow-xl overflow-hidden flex mx-auto">
-        <img className="transform flip-y object-cover" src="/img/stefan-stefancik-Ue2-23uBwNw-unsplash.jpg" />
+        <img className="transform flip-y object-cover" src={stefansPhoto} />
       </div>
     </div>
     <div className="mb-10 md:mb-0">
       <div className="font-bold text-lg mb-5 text-center">transform flip-x</div>
       <div className="w-52 rounded-xl shadow-xl overflow-hidden flex mx-auto">
-        <img className="transform flip-x object-cover" src="/img/stefan-stefancik-Ue2-23uBwNw-unsplash.jpg" />
+        <img className="transform flip-x object-cover" src={stefansPhoto} />
       </div>
     </div>
     <div className="mb-10 md:mb-0">
       <div className="font-bold text-lg mb-5 text-center">transform flip-z</div>
       <div className="w-52 rounded-xl shadow-xl overflow-hidden flex mx-auto">
-        <img className="transform flip-z object-cover" src="/img/stefan-stefancik-Ue2-23uBwNw-unsplash.jpg" />
+        <img className="transform flip-z object-cover" src={stefansPhoto} />
       </div>
     </div>
   </div>

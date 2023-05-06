@@ -46,7 +46,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/XPD-Kasun/tailwind-3dtransform-plugin',
+            'https://github.com/XPD-Kasun/tailwind-3dtransform-plugin/edit/website/',
         },
         blog: false,
         theme: {
@@ -70,9 +70,9 @@ const config = {
         items: [
           { type: 'doc', docId: 'quick-start', label: 'Quick Start', position: 'right' },
           { type: 'doc', docId: '/category/guide', label: 'Guide', position: 'right'},
-          { type: 'doc', docId: '/category/faq', label: 'Reference', position: 'right'},
+          { type: 'doc', docId: '/category/faq', label: 'FAQ', position: 'right'},
           { href: 'https://tailwindcss.com/docs/installation', label: 'TailwindCSS Docs', position: 'right'},
-          { href: 'https://github.com/XPD-Kasun/tailwind-3dtransform-plugin', html: '<img width="32" src="/img/GitHub-Mark.png" class="headerIcon"/>', position: 'right'}
+          { href: 'https://github.com/XPD-Kasun/tailwind-3dtransform-plugin', html: '<div class="github-logo"></div>', position: 'right'}
         ],
       },
       footer: {
