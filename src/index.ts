@@ -13,6 +13,7 @@ import transformStyle from './base/transformStyle';
 
 const tailwind3dTransformPlugin = plugin((pluginAPI) => {
 
+       perspectiveOrigin(pluginAPI);
        perspective(pluginAPI);
        transformRotate(pluginAPI);
        transformTranslate(pluginAPI);
@@ -22,7 +23,6 @@ const tailwind3dTransformPlugin = plugin((pluginAPI) => {
        backfaceVisibility(pluginAPI);
        transformBox(pluginAPI);
        transformStyle(pluginAPI);
-       perspectiveOrigin(pluginAPI);
 
 	pluginAPI.addBase({
 		':root': {

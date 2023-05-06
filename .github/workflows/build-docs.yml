@@ -36,6 +36,7 @@ jobs:
         with:
           name: 'github-pages'
           path: 'website/build'
+          retention-days: '1'
           
   deploy:
     runs-on: ubuntu-latest
@@ -50,5 +51,3 @@ jobs:
       - name: Deployment To Pages
         uses: actions/deploy-pages@v2
         id: deploy
-
-

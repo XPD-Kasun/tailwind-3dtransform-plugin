@@ -1,0 +1,78 @@
+---
+title: Quick Start
+slug: /
+sidebar_position: 1
+---
+
+# Tailwind 3dTransform Plugin
+
+Tailwind 3dTransform Plugin is a tailwindcss plugin for enabling 3d css transforms.
+
+Default tailwindcss framework only ships with 2d transforms. This plugin extends the default tailwindcss platform through plugin API to include the other transforms that transform css property supports.
+
+## Installation
+
+You can install the plugin with,
+
+  ```bash
+  npm install --save-dev @xpd/tailwind-3dtransforms
+  ```
+
+<details>
+  <summary>
+  Or with other package managers,
+  </summary>
+  <div>
+  with yarn,
+
+  ```bash
+  yarn add -D @xpd/tailwind-3dtransforms
+  ```
+
+  with pnpm,
+
+  ```bash
+  pnpm install --save-dev @xpd/tailwind-3dtransforms
+  ```
+  </div>
+</details>
+
+Then import plugin instance into the `plugin` section of `tailwind.config.js` file.
+
+```js
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    /* Path(s) to your ts or js files  */
+  ],
+  theme: {
+  },
+  plugins: [
+    require("@xpd/tailwind-3dtransforms")
+  ],
+};
+```
+
+`require("@xpd/tailwind-3dtransforms")` will add the plugin to the tailwindcss framework and now we are good to go!
+
+## Usage
+
+Now you can start adding classes like `rotate-x-60`, `translate-y-[300px]`, `perspective-800`...etc. Currently we support following
+css properties and transform functions.
+
+- translateX, translateY, translateZ, translate3d
+- rotateX, rotateY, rotateZ, rotate3d
+- scaleX, scaleY, scaleZ, scale3d
+- perspective
+- backface-visibility
+- perspective-origin
+- transform-style
+- transform-box
+
+Additionally, we support `flip-x`, `flip-y` and `flip-z` classes to flip an element around x, y or z axis.
+
+:::tip Let's Start
+To start quickly adding these classes, checkout [Guide](/category/guide) documentation.
+:::
+
+
