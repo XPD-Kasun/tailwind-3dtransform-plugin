@@ -23,7 +23,7 @@ Utilities for translating an element on all three axis.
                                           "0rem","1px","0.125rem","0.25rem","0.375rem","0.5rem","0.625rem","0.75rem","0.875rem","1rem","1.25rem","1.5rem","1.75rem","2.0rem","2.25rem","2.5rem","2.75rem","3.0rem","3.5rem","4.0rem","5.0rem","6.0rem","7.0rem","8.0rem","9.0rem","10.0rem","11.0rem","12.0rem","13.0rem","14.0rem","15.0rem","16.0rem","18.0rem","20.0rem","24.0rem","50%","33.333%","66.666%","25%","50%","75%","100%"
                                    ];
                                    return (['x','y','z'].map((axis, i2) => (
-                                          <tr>
+                                          <tr key={i1 + axis}>
                                                  <td>translate-{axis}-{value}</td>
                                                  <td>transform: translate{axis.toUpperCase()}({valueMap[i1]});</td>
                                           </tr>   
@@ -63,18 +63,18 @@ Read more on this [here](/faq/whyTransform).
 :::
 
 <CodeBlock className="my-10">
-  <div className="flex space-x-10">
-    <div className="w-52 h-52 bg-yellow-200 rounded-lg relative">
+  <div className="md:flex gap-x-10">
+    <div className="max-sm:mb-10 w-52 h-52 bg-yellow-200 rounded-lg relative">
       <div className="w-20 h-20 bg-teal-400 rounded-lg">    
       </div>
       <div className="absolute bottom-2 text-center w-full">No transforms</div>
     </div>
-    <div className="w-52 h-52 bg-yellow-200 rounded-lg relative">
+    <div className="max-sm:mb-10 w-52 h-52 bg-yellow-200 rounded-lg relative">
       <div className="w-20 h-20 bg-teal-400 rounded-lg transform translate-x-10 translate-y-16">    
       </div>
       <div className="absolute bottom-2 text-center w-full">translate-x-10<br/>translate-y-16</div>
     </div>
-    <div className="perspective-1000">
+    <div className="max-sm:mb-10 perspective-1000">
       <div className="w-52 h-52 bg-yellow-200 rounded-lg relative transform rotate-x-30">
         <div className="w-20 h-20 bg-teal-400 rounded-lg transform translate-x-10 translate-y-16 translate-z-10">    
         </div>

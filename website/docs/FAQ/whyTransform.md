@@ -5,7 +5,7 @@ title: Why we add transform class?
 
 # Why we add transform class?
 
-:::danger Always check whether `transform` class is applied to your element
+:::danger Always check whether transform class is applied to your element
 To apply the 3d transforms you need to apply `transform` class.
 :::
 

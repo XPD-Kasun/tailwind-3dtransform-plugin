@@ -42,17 +42,17 @@ Utilities for setting backface visibility css property.
 Use the `backface-visible` to set the backface visibility and `backface-hidden` to hide the backface visibility.
 
 <CodeBlock className="my-10">
-  <div className="flex space-x-5">
-    <div className="perspective-800 group">
+  <div className="md:flex gap-x-5">
+    <div className="max-sm:mb-5 perspective-800 group">
       <div className="transform transition group-hover:rotate-y-180 p-6 bg-white border border-gray-400 rounded-lg shadow">
         <h5 className="mb-2 text-2xl font-semibold text-gray-900">backface-visible</h5>
-        <p>Default is backface visible</p>
+        <p>Default is backface visible. Hover(or tap) to rotate.</p>
       </div>
     </div>
-    <div className="perspective-800 group">
-      <div className="transform transition group-hover:rotate-y-180 p-6 bg-white border border-gray-400 rounded-lg shadow">
-        <h5 className="mb-2 text-2xl font-semibold text-gray-900 backface-hidden">backface-hidden</h5>
-        <p className="backface-hidden">Backface Visibility Hidden</p>
+    <div className="max-sm:mb-10 perspective-800 group">
+      <div className="backface-hidden transform transition group-hover:rotate-y-180 p-6 bg-white border border-gray-400 rounded-lg shadow">
+        <h5 className="mb-2 text-2xl font-semibold text-gray-900">backface-hidden</h5>
+        <p className="backface-hidden">Backface Visibility Hidden. Hover(or tap) to rotate.</p>
       </div>
     </div>
   </div>
@@ -77,34 +77,49 @@ Use the `backface-visible` to set the backface visibility and `backface-hidden` 
 
 We can use this to implement card effects like revealing cards on hover.
 
+import stefansPhoto from '@site/static/img/stefan-stefancik-Ue2-23uBwNw-unsplash.jpg';
+import logo from '@site/static/img/logo.png';
+
 <CodeBlock className="my-10">
-  <div className="flex space-x-5">
-    <div className="group w-[250px] h-[150px] perspective-800 group" >
-      <div className="will-change-transform p-6 bg-white border transform transition duration-[1.5s] group-hover:rotate-y-180 border-gray-400 rounded-lg shadow absolute t-0">
+  <div className="group w-[250px] h-[350px] perspective-800 group" >
+    <div className="backface-hidden will-change-transform transform transition duration-[1.5s] group-hover:rotate-y-180 rounded-lg shadow-lg absolute t-0 overflow-hidden">
+      <img src={stefansPhoto} />
+      <div className="p-6">
         <h5 className="mb-2 text-2xl font-semibold text-gray-900">Front Side</h5>
         <p>Hover on this card and see the backside</p>
       </div>
-      <div className="will-change-transform p-6 bg-white border transform transition duration-[1.5s] -rotate-y-180 border-gray-400 group-hover:rotate-y-0 rounded-lg shadow absolute t-0">        
+    </div>
+    <div className="backface-hidden will-change-transform transform transition duration-[1.5s] -rotate-y-180 group-hover:rotate-y-0 rounded-lg shadow-lg absolute t-0 overflow-hidden">        
+      <img src={logo} className="mx-auto !h-[168px] object-center w-full object-contain bg-neutral-100"/>
+      <div className="p-6">
         <h5 className="mb-2 text-2xl font-semibold text-gray-900">Back Side</h5>
-        <p>Have you tried tailwind-3dtransform-plugin?</p>
+        <p>How are you? Go ahead and implement a card.</p>
       </div>
     </div>
   </div>
 </CodeBlock>
 
 ```html title="Cards flip on hover"
-<div className="flex space-x-5">
-  <div className="group w-[250px] h-[150px] perspective-800 group" >
-    <div className="p-6 bg-white border transform transition duration-[1.5s] group-hover:rotate-y-180 border-gray-400 rounded-lg shadow absolute t-0">
-      <h5 className="mb-2 text-2xl font-semibold text-gray-900">Front Side</h5>
-      <p>Hover on this card and see the backside</p>
-    </div>
-    <div className="p-6 bg-white border transform transition duration-[1.5s] -rotate-y-180 border-gray-400 group-hover:rotate-y-0 rounded-lg shadow absolute t-0">
-      <h5 className="mb-2 text-2xl font-semibold text-gray-900">Back Side</h5>
-      <p>Have you tried tailwind-3dtransform-plugin?</p>
+ <div class="group w-[250px] h-[350px] perspective-800 group" >
+    <!-- highlight-next-line -->
+    <div class="backface-hidden transform transition duration-[1.5s] group-hover:rotate-y-180 
+      rounded-lg shadow-lg absolute t-0">
+      <img src="./stefansPhoto.jpg" />
+      <div class="p-6">
+        <h5 class="mb-2 text-2xl font-semibold text-gray-900">Front Side</h5>
+        <p>Hover on this card and see the backside</p>
+      </div>
+    </div>    
+    <!-- highlight-next-line -->
+    <div class="backface-hidden transform transition duration-[1.5s] -rotate-y-180 group-hover:rotate-y-0 
+      rounded-lg shadow-lg absolute t-0">        
+      <img src="./logo.jpg" class="mx-auto !h-[168px] object-center w-full object-contain bg-neutral-100"/>
+      <div class="p-6">
+        <h5 class="mb-2 text-2xl font-semibold text-gray-900">Back Side</h5>
+        <p>How are you? Go ahead and implement a card.</p>
+      </div>
     </div>
   </div>
-</div>
 ```
 
 ## Read More

@@ -21,7 +21,7 @@ Utilities for scaling an element on all three axis.
                             [0, 50, 75, 90, 95, 100, 105, 110, 125, 150].map((value) => {
                                    return (
                                           ['x', 'y', 'z'].map((axis) => (
-                                                 <tr>
+                                                 <tr key={axis}>
                                                         <td>scale-{axis}-{value}</td>
                                                         <td>transform: scale{axis.toUpperCase()}({value/100})</td>
                                                  </tr>
@@ -54,20 +54,18 @@ Read more on this [here](/faq/whyTransform).
 :::
 
 <CodeBlock className="my-10">
-<div className="perspective-1000">
-  <div className="flex space-x-10">  
-    <div className="w-52 h-52 bg-teal-400 rounded-xl flex text-white font-bold text-xl justify-center items-center">No Transform</div>
-    <div className="w-52 h-52 bg-teal-400 rounded-xl flex text-white font-bold text-xl flex-col justify-center items-center scale-x-[0.8] scale-y-110 transform">
+  <div className="md:flex gap-x-10 perspective-1000">  
+    <div className="mx-auto max-sm:mb-5 w-52 h-52 bg-teal-400 rounded-xl flex text-white font-bold text-xl justify-center items-center">No Transform</div>
+    <div className="mx-auto w-52 h-52 bg-teal-400 rounded-xl flex text-white font-bold text-xl flex-col justify-center items-center scale-x-[0.8] scale-y-110 transform">
       <div>scale-x-[0.8]</div>
       <div>scale-y-110</div>
     </div>
-    <div className="w-52 h-52 bg-teal-400 rounded-xl flex text-white font-bold text-xl flex-col justify-center items-center scale-x-110 scale-y-[0.8] scale-z-110 transform">
+    <div className="mx-auto max-sm:mb-5 w-52 h-52 bg-teal-400 rounded-xl flex text-white font-bold text-xl flex-col justify-center items-center scale-x-110 scale-y-[0.8] scale-z-110 transform">
       <div>scale-x-110</div>
       <div>scale-y-[0.8]</div>
       <div>scale-z-110</div>
     </div>
   </div>
-</div>
 </CodeBlock>
 
 ```html title="Applying different scale classes"

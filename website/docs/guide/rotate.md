@@ -50,22 +50,22 @@ Read more on this [here](/faq/whyTransform).
 
 :::
 
-<CodeBlock className="my-5">
-<div className="flex space-x-5">
-  <div className="perspective-800">
-    <div className="transform transition hover:rotate-y-30 max-w-sm p-6 bg-white border border-gray-400 rounded-lg shadow ">
+<CodeBlock className="my-5 -z-10 max-sm:relative">
+<div className="md:flex gap-5">
+  <div className="max-sm:mb-5 perspective-800">
+    <div className="max-sm:rotate-y-30 transform transition hover:rotate-y-30 max-w-sm p-6 bg-white border border-gray-400 rounded-lg shadow ">
       <h5 className="mb-2 text-2xl font-semibold text-gray-900">Rotate Around Y</h5>
       <p>transform hover:rotate-y-60</p>
     </div>
   </div>
-  <div className="perspective-800">
-    <div className="transform transition hover:rotate-x-45 max-w-sm p-6 bg-white border border-gray-400 rounded-lg shadow ">
+  <div className="max-sm:mb-5 perspective-800">
+    <div className="max-sm:rotate-x-45 transform transition hover:rotate-x-45 max-w-sm p-6 bg-white border border-gray-400 rounded-lg shadow ">
       <h5 className="mb-2 text-2xl font-semibold text-gray-900">Rotate Around X</h5>
       <p>transform hover:rotate-x-45</p>
     </div>
   </div>
-  <div className="perspective-800">
-    <div className="transform transition hover:rotate-z-30 max-w-sm p-6 bg-white border border-gray-400 rounded-lg shadow ">
+  <div className="max-sm:mb-5 perspective-800">
+    <div className="max-sm:rotate-z-30 transform transition hover:rotate-z-30 max-w-sm p-6 bg-white border border-gray-400 rounded-lg shadow ">
       <h5 className="mb-2 text-2xl font-semibold text-gray-900">Rotate Around Z</h5>
       <p>transform hover:rotate-z-30</p>
     </div>
@@ -73,7 +73,7 @@ Read more on this [here](/faq/whyTransform).
 </div>
 </CodeBlock>
 
-```html title="Using rotation classes for cards (Above cards use hover: to apply rotation on hover. We exclude it for simplicity)"
+```html title="Using rotation classes for cards (Above cards use hover on desktop: to apply rotation on hover on desktop. We exclude it for simplicity). In mobile view, transitions will be applied regardless of hover."
 <div class="flex">
   <div class="perspective-800">
     <div class="transform rotate-y-30">
