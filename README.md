@@ -4,6 +4,8 @@
 
 This plugin generates necessary classes for perspective, rotation, translate, scale and many other transforms.
 
+**Works with tailwindcss autocomplete extension for VSCode editor**.
+
 We currently supports,
 
 - translateX, translateY, translateZ, translate3d
@@ -15,6 +17,7 @@ We currently supports,
 - transform-style
 - transform-box
 - flip
+
 
 To quickly get started, [learn how to use tailwind-3d-transforms in your project](https://xpd-kasun.github.io/tailwind-3dtransform-plugin/).
 
