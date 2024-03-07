@@ -58,7 +58,7 @@ This is another example using tailwind defaults,
 
 Plugin requires you to add `transform` class along with other transform classes to apply the effect.<br/>
 For example, instead of `translate-y-20`, use `transform translate-y-20`.<br/>
-Read more on this [here](/faq/whyTransform).
+Read more on this [here](/FAQ/whyTransform).
 
 :::
 

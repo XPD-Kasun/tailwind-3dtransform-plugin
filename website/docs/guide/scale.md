@@ -49,7 +49,7 @@ You can apply scaling on all axes. For instance to apply 0.5 scaling on x and 2 
 
 Plugin requires you to add `transform` class along with other transform classes to apply the effect.<br/>
 For example, instead of `scale-x-110`, use `transform scale-x-110`.<br/>
-Read more on this [here](/faq/whyTransform).
+Read more on this [here](/FAQ/whyTransform).
 
 :::
 

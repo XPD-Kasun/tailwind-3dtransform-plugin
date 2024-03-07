@@ -49,7 +49,7 @@ Use `flip-x`, `flip-y` or `flip-z` classes to flip an element around the targete
 
 Plugin requires you to add `transform` class along with other transform classes to apply the effect.<br/>
 For example, instead of `flip-x`, use `transform flip-x`.<br/>
-Read more on this [here](/faq/whyTransform).
+Read more on this [here](/FAQ/whyTransform).
 
 :::
 

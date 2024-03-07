@@ -1,6 +1,7 @@
 ---
 sidebar_position: 3
 ---
+import React from 'react';
 import CodeBlock from '../../src/components/CodeBlock';
 
 # Rotate
@@ -40,13 +41,13 @@ Utilities for rotating an element on all three axis.
 
 ## Basic Usage
 
-Rotation classes are used to rotate an element relative to an axis. The rotation axis is determined by the value of transform-origin class applied which is set center as default. Also you need to add `perspective` class to the parent of the element that you transform to get the 3d look. The syntax for above classes is rotation-{axis}-{angle}. Hover on below example to see it in action.
+Rotation classes are used to rotate an element relative to an axis. The rotation axis is determined by the value of transform-origin class applied which is set center as default. Also you need to add `perspective` class to the parent of the element that you transform to get the 3d look. The syntax for above classes is rotation-[axis]-[angle]. Hover on below example to see it in action.
 
 :::info Remember to add transform class
 
 Plugin requires you to add `transform` class along with other transform classes to apply the effect.<br/>
 For example, instead of `rotate-x-45`, use `transform rotate-x-45`.<br/>
-Read more on this [here](/faq/whyTransform).
+Read more on this [here](/FAQ/whyTransform).
 
 :::
 
